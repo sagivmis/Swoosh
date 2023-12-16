@@ -1,0 +1,29 @@
+.player {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  color: white;
+  padding: 1em;
+}
+
+.basketball-icon {
+  position: absolute;
+  left: 0.5em;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.basketball-icon:hover {
+  color: var(--ultra-lt-orange);
+  transition: color 0.3s;
+}
+
+.basketball-icon.favorite {
+  color: var(--lt-orange);
+}
+
+.basketball-icon.favorite:hover {
+  color: var(--mid-orange);
+}

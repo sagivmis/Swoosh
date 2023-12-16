@@ -1,11 +1,17 @@
-import React, { useEffect } from "react"
-import useFetchData from "../../hooks/useFetchData"
+import React from "react"
 import "./swoosh.css"
+import AllPlayers from "../AllPlayers"
+import FavoritePlayers from "../FavoritePlayers"
 
 function Swoosh() {
-  const { data } = useFetchData()
-
-  return <div className='swoosh'></div>
+  return (
+    <div className='swoosh-container'>
+      <div className='swoosh'>
+        <AllPlayers />
+        <FavoritePlayers />
+      </div>
+    </div>
+  )
 }
 
 export default Swoosh

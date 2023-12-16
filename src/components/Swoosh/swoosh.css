@@ -1,8 +1,79 @@
-.swoosh {
+.swoosh-container {
   --orange: #d35400;
+  --mid-orange: #f56200;
+  --lt-orange: #ff7418;
+  --ultra-lt-orange: #ffd0b1;
+
   width: 100vw;
   height: 100vh;
 
   text-align: center;
   background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/basketball.png");
+}
+
+.swoosh {
+  width: 100%;
+  height: 100%;
+  gap: 16.667%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-container {
+  position: relative;
+  width: 33%;
+  height: 80%;
+  background-color: wheat;
+  border-radius: 0.5em;
+  box-shadow: rgba(100, 100, 111, 0.45) 0px 7px 29px 0px;
+}
+
+.list-controls {
+  --margin: 1em;
+  --padding: 0.5em;
+  margin: var(--margin);
+  padding: var(--padding);
+  position: absolute;
+  width: calc(100% - calc(var(--margin) * 2) - calc(var(--padding) * 2));
+  height: calc(12.5% - calc(var(--margin) * 2) - calc(var(--padding) * 2));
+  background-color: var(--orange);
+  background-image: url("../../assets/basketball.png");
+  border-radius: 0.5em;
+}
+
+.list-content {
+  --margin: 1em;
+  --padding: 0.5em;
+  position: relative;
+  margin: var(--margin);
+  padding: var(--padding);
+  width: calc(100% - calc(var(--margin) * 2) - calc(var(--padding) * 2));
+  height: calc(90% - calc(var(--margin) * 2) - calc(var(--padding) * 2));
+  top: 10%;
+  background-color: white;
+  background-color: var(--orange);
+  background-image: url("../../assets/basketball.png");
+  border-radius: 0.5em;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.list-content::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.list-content::-webkit-scrollbar-thumb {
+  background: wheat;
+  border-radius: 3px;
+}
+
+.list-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
