@@ -1,0 +1,8 @@
+.swoosh {
+  --orange: #d35400;
+  width: 100vw;
+  height: 100vh;
+
+  text-align: center;
+  background-color: var(--orange);
+}
